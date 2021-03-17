@@ -40,7 +40,7 @@ async def root(image_request: ImageRequest):
                  image_request.preprocessing,
                  image_request.postprocessing)
 
-    return "Image stored: {output_path}"
+    return f"Image stored: {output_path}"
 
 def _validate_parameter(parameter, value, valid_values):
     if value not in valid_values:
