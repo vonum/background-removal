@@ -12,6 +12,7 @@ COPY setup.sh ./setup.sh
 RUN ./setup.sh
 
 COPY . ./
+RUN mkdir images
 
 CMD uvicorn --host 0.0.0.0 server:app
 # CMD gunicorn -w 4 server:app
