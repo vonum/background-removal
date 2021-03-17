@@ -10,7 +10,6 @@ import image_background_removal as ibrm
 
 app = FastAPI()
 
-BUCKET_NAME = "zopte-sandbox-images"
 OUTPUT_IMAGES_PATH = "images"
 
 MODELS = ["u2net", "u2netp", "basnet", "xception_model", "mobile_net_model"]
