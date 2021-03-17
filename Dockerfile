@@ -14,5 +14,5 @@ RUN ./setup.sh
 COPY . ./
 RUN mkdir images
 
-CMD uvicorn --host 0.0.0.0 server:app
-# CMD gunicorn -w 4 server:app
+CMD gunicorn server:app -w 4 -k uvicorn.workers.UvicornWorker -b "0.0.0.0:8000"
+# CMD uvicorn --host 0.0.0.0 server:app
